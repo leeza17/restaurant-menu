@@ -1,1 +1,136 @@
+<!-- started 1/20/26, assignment 1 (day one of class) --> 
+
+<!-- chat prompt: build a pizza restaurant menu in HTML only. 
+make it 12 items, include price, description of ingredients, 
+make the name of the restaurant creative, 
+make the HTML accessibility compliant --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moonfire Pizzeria – Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <header>
+    <h1>Moonfire Pizzeria</h1>
+    <p>Wood-fired pizzas inspired by late nights and bold flavors.</p>
+  </header>
+
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About Us</a></li>
+    </ul>
+  </nav>
+
+  <main id="menu">
+    <section aria-labelledby="menu-heading">
+      <h2 id="menu-heading">Pizza Menu</h2>
+      <p>All pizzas are 12” and made with house-fermented dough.</p>
+
+      <ul>
+        <li>
+          <h3>1. Lunar Margherita <span aria-hidden="true">— $14</span></h3>
+          <p>
+            Classic tomato sauce, fresh mozzarella, basil leaves, extra-virgin olive oil.
+            <span class="sr-only">Price: fourteen dollars.</span>
+          </p>
+        </li>
+
+        <li>
+          <h3>2. Eclipse Pepperoni — $16</h3>
+          <p>
+            Tomato sauce, mozzarella, crispy pepperoni, oregano.
+          </p>
+        </li>
+
+        <li>
+          <h3>3. Supernova Veggie — $17</h3>
+          <p>
+            Tomato sauce, mozzarella, roasted bell peppers, red onion, mushrooms, black olives.
+          </p>
+        </li>
+
+        <li>
+          <h3>4. Midnight Mushroom — $18</h3>
+          <p>
+            Garlic cream sauce, mozzarella, wild mushrooms, thyme, parmesan.
+          </p>
+        </li>
+
+        <li>
+          <h3>5. Solar BBQ Chicken — $18</h3>
+          <p>
+            Barbecue sauce, mozzarella, grilled chicken, red onion, cilantro.
+          </p>
+        </li>
+
+        <li>
+          <h3>6. Comet Hawaiian — $17</h3>
+          <p>
+            Tomato sauce, mozzarella, smoked ham, caramelized pineapple.
+          </p>
+        </li>
+
+        <li>
+          <h3>7. Orbit White Spinach — $18</h3>
+          <p>
+            Garlic ricotta base, mozzarella, sautéed spinach, roasted garlic.
+          </p>
+        </li>
+
+        <li>
+          <h3>8. Asteroid Meat Lovers — $20</h3>
+          <p>
+            Tomato sauce, mozzarella, pepperoni, sausage, bacon, ground beef.
+          </p>
+        </li>
+
+        <li>
+          <h3>9. Nebula Truffle — $21</h3>
+          <p>
+            Truffle oil cream sauce, mozzarella, mushrooms, parmesan, cracked black pepper.
+          </p>
+        </li>
+
+        <li>
+          <h3>10. Cosmic Buffalo — $18</h3>
+          <p>
+            Buffalo sauce, mozzarella, spicy chicken, blue cheese drizzle.
+          </p>
+        </li>
+
+        <li>
+          <h3>11. Stardust Pesto — $17</h3>
+          <p>
+            Basil pesto, mozzarella, cherry tomatoes, fresh mozzarella pearls.
+          </p>
+        </li>
+
+        <li>
+          <h3>12. Dark Side Vegan — $18</h3>
+          <p>
+            Tomato sauce, dairy-free cheese, mushrooms, onions, spinach, olives.
+          </p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Moonfire Pizzeria</h2>
+      <p>
+        Moonfire Pizzeria specializes in handcrafted, wood-fired pizzas using fresh,
+        thoughtfully sourced ingredients.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Moonfire Pizzeria. All rights reserved.</p>
+  </footer>
+</body>
+</html>
 
