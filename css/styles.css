@@ -5,15 +5,15 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Georgia', 'Garamond', serif;
     background: linear-gradient(135deg, #000000 0%, #0a0a15 50%, #0f0520 100%);
     background-attachment: fixed;
-    color: #fff;
+    color: #e8e8e8;
     min-height: 100vh;
-    padding: 20px;
+    padding: 40px 20px;
 }
 
-/* Cosmic glow effect */
+/* Subtle cosmic glow effect */
 body::before {
     content: '';
     position: fixed;
@@ -22,65 +22,82 @@ body::before {
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(255, 0, 255, 0.08) 0%, transparent 50%);
+    background: radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 0, 200, 0.05) 0%, transparent 50%);
     z-index: -1;
 }
 
 header {
     text-align: center;
-    padding: 40px 20px;
-    background: rgba(0, 255, 255, 0.05);
-    border-radius: 20px;
-    margin-bottom: 40px;
-    border: 3px solid rgba(0, 255, 255, 0.6);
-    box-shadow: 0 0 40px rgba(0, 255, 255, 0.4);
+    padding: 60px 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin-bottom: 60px;
+    border-top: 3px solid rgba(0, 255, 255, 0.4);
+    border-bottom: 3px solid rgba(0, 255, 255, 0.4);
+    position: relative;
+}
+
+header::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.6), transparent);
 }
 
 header h1 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    background: linear-gradient(45deg, #00ff00, #ffff00, #00ff00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-shadow: 0 0 30px rgba(0, 255, 0, 0.5);
-    letter-spacing: 2px;
+    font-size: 4em;
+    margin-bottom: 15px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    color: rgba(0, 255, 255, 0.9);
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    font-family: 'Georgia', serif;
 }
 
 header p {
-    font-size: 1.2em;
-    color: #00ffff;
+    font-size: 1.15em;
+    color: #b0b0b0;
     font-style: italic;
+    letter-spacing: 1px;
+    margin-top: 20px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 nav ul {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 50px;
 }
 
 nav a {
-    color: #00ffff;
+    color: #c0c0c0;
     text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 500;
-    padding: 10px 20px;
-    border-radius: 8px;
+    font-size: 1em;
+    font-weight: normal;
+    padding: 12px 24px;
+    border-radius: 2px;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
 }
 
 nav a:hover {
-    border: 2px solid #00ffff;
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
-    transform: scale(1.05);
+    border-left: 2px solid rgba(0, 255, 255, 0.7);
+    border-right: 2px solid rgba(0, 255, 255, 0.7);
+    color: #00ffff;
+    box-shadow: inset 0 0 20px rgba(0, 255, 255, 0.1);
 }
 
 main {
@@ -89,52 +106,68 @@ main {
 }
 
 main h2 {
-    font-size: 2.5em;
+    font-size: 3em;
     text-align: center;
-    margin-bottom: 15px;
-    color: #00ffff;
-    text-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+    margin-bottom: 25px;
+    color: rgba(0, 255, 200, 0.9);
+    text-shadow: 0 0 20px rgba(0, 255, 200, 0.2);
+    font-weight: normal;
+    letter-spacing: 2px;
+    font-family: 'Georgia', serif;
 }
 
 main > section > p {
     text-align: center;
-    color: #00ff88;
-    margin-bottom: 40px;
-    font-size: 1.1em;
+    color: #a8a8a8;
+    margin-bottom: 50px;
+    font-size: 1.05em;
+    line-height: 1.8;
+    letter-spacing: 0.5px;
 }
 
 ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    gap: 25px;
+    gap: 30px;
     justify-content: center;
 }
 
 li {
-    background: rgba(0, 0, 0, 0.6);
-    border: 2px solid rgba(0, 255, 255, 0.5);
-    border-radius: 15px;
-    padding: 25px;
+    background: rgba(5, 5, 15, 0.7);
+    border: 1px solid rgba(0, 255, 200, 0.2);
+    border-radius: 4px;
+    padding: 35px 30px;
     width: 100%;
     max-width: 320px;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+    transition: all 0.4s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    position: relative;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 255, 200, 0.4), transparent);
 }
 
 li:hover {
-    transform: translateY(-10px);
-    border-color: rgba(0, 255, 255, 1);
-    box-shadow: 0 15px 40px rgba(0, 255, 255, 0.5),
-                0 0 30px rgba(255, 0, 255, 0.3);
-    background: rgba(0, 20, 40, 0.8);
+    transform: translateY(-8px);
+    border-color: rgba(0, 255, 200, 0.6);
+    box-shadow: 0 20px 50px rgba(0, 255, 200, 0.15),
+                0 0 30px rgba(0, 255, 200, 0.1);
+    background: rgba(0, 20, 30, 0.8);
 }
 
 figure {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -142,28 +175,31 @@ img {
     width: 200px;
     height: 200px;
     object-fit: cover;
-    border-radius: 12px;
-    border: 2px solid rgba(0, 255, 255, 0.6);
-    transition: all 0.3s ease;
+    border-radius: 3px;
+    border: 1px solid rgba(0, 255, 200, 0.3);
+    transition: all 0.4s ease;
 }
 
 li:hover img {
-    border-color: rgba(255, 0, 255, 1);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.6);
+    border-color: rgba(0, 255, 200, 0.7);
+    box-shadow: 0 0 30px rgba(0, 255, 200, 0.25);
 }
 
 h3 {
-    font-size: 1.4em;
-    margin-bottom: 10px;
-    color: #ffff00;
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: rgba(0, 255, 200, 0.95);
     letter-spacing: 1px;
+    font-family: 'Georgia', serif;
+    font-weight: normal;
 }
 
 li p {
-    color: #00ff88;
+    color: #b8b8b8;
     font-size: 0.95em;
-    line-height: 1.6;
+    line-height: 1.7;
     flex-grow: 1;
+    font-family: 'Georgia', serif;
 }
 
 /* Responsive design */
@@ -187,6 +223,8 @@ li p {
     }
     
     nav ul {
-        gap: 15px;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
     }
 }
